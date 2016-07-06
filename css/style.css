@@ -46,24 +46,49 @@
     	height: 15vh;
     	width: 100%;
     	margin-top: -25px;
-    	background: rgba(51, 54, 87, 1);
+    	background: #333657;
     }
 
      .header .title {
      	padding: 20px;
      	color: #FFF;
      	font-size: 2.2em;
+     	background: url(../img/google-hangouts-logo.png) no-repeat 300px 35px;
+     	background-size: 25px;
      }
+
+      .header .title::before {
+      	content: "<";
+      	font-size: 40px;
+      	color: #FFF;
+      	position: relative;
+      	left: 260px;
+      }
+
+      .header .title::after {
+      	content: "/>";
+      	font-size: 40px;
+      	color: #FFF;
+      	position: relative;
+      	right: -60px;
+      }
 
      .header a {
      	text-decoration: none;
      }
 
-	   .lectures {
+     .galerie-hangout {
+     	width: auto;
+     	max-width: 1000px;
+     	margin-right: auto;
+     	margin-left: auto;
+     }
+
+	   .hangout {
 	   		width: 220px;
 	   		border-radius: 5px;
 	   		display: inline-block;
-	   		margin: 20px 4px 20px 20px;
+	   		margin: 10px;
 	   		border: 1px solid #f0f0f0;
 	   		vertical-align: top;
 	   		min-height: 250px;
@@ -71,34 +96,34 @@
 
 	 
 	   
-	   .lectures img {
+	   .hangout img {
 	   		width: 100%;
 	   		height: 120px;
 	   		transition: 0.8s;
 	   		border-radius: 5px 5px 0px 0px;
 	   }
 
-	   .lectures img:hover {
+	   .hangout img:hover {
 	   		opacity: 0.5;
 	   }
 
-	   .lectures a {
+	   .hangout a {
 	   		text-decoration: none;
 	   }
 	   
-	   .lecture-name,
-	   .lecture-theme {
+	   .hangout-name,
+	   .hangout-theme {
 	   		 display: block;
 	   		 padding: 5px;
 
 	   }
 
-	   .lecture-name {
+	   .hangout-name {
 	   		color: #b2b2b2;
 	   		font-size: 1em;
 	   }
 
-	   .lecture-theme {
+	   .hangout-theme {
 	   		font-size: 1.3em;
 	   		color: #4040a1;
 	   }
@@ -134,7 +159,56 @@
        		font-size: 1.5em;
        		font-family: sans-serif;
        }
-   
-    
 
-  
+       .site-footer {
+       		background: #333657;
+       		position: relative;
+       		bottom: -25px;
+       }
+
+        .site-footer p {
+       	   color: #FFF;
+       	   padding: 10px;
+       }
+
+        .site-footer p a {
+        	text-decoration: none;
+        }
+        
+       .site-footer p:first-child {
+       		font-size: 1.5em;
+       		text-align: center;
+       		padding: 30px;
+       }
+
+
+/* MOBILE */
+
+@media (max-width: 980px) {
+	.galerie-hangout {
+		width: 90%;
+	}
+
+	.hangout {
+		width: 30%;
+	}
+}
+
+@media (max-width: 817px) {
+	
+	.hangout {
+		width: 30%;
+		margin: 10px 5px;
+	}
+}
+
+@media (max-width: 493px) {
+	.galerie-hangout {
+		text-align: center;
+	}
+
+	.hangout {
+		width: 80%;
+		margin-bottom: 10px;
+	}
+}

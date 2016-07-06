@@ -53,7 +53,25 @@
      	padding: 20px;
      	color: #FFF;
      	font-size: 2.2em;
+     	background: url(../img/google-hangouts-logo.png) no-repeat 300px 35px;
+     	background-size: 25px;
      }
+
+      .header .title::before {
+      	content: "<";
+      	font-size: 40px;
+      	color: #FFF;
+      	position: relative;
+      	left: 260px;
+      }
+
+      .header .title::after {
+      	content: "/>";
+      	font-size: 40px;
+      	color: #FFF;
+      	position: relative;
+      	right: -60px;
+      }
 
      .header a {
      	text-decoration: none;
@@ -148,12 +166,21 @@
        		bottom: -25px;
        }
 
-       .site-footer p {
-       		color: #FFF;
+        .site-footer p {
+       	   color: #FFF;
+       	   padding: 10px;
+       }
+
+        .site-footer p a {
+        	text-decoration: none;
+        }
+        
+       .site-footer p:first-child {
        		font-size: 1.5em;
        		text-align: center;
        		padding: 30px;
        }
+
 
 /* MOBILE */
 

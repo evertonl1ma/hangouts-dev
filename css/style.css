@@ -164,6 +164,7 @@
        		background: #333657;
        		position: relative;
        		bottom: -25px;
+          padding: 20px;
        }
 
         .site-footer p {
@@ -178,8 +179,22 @@
        .site-footer p:first-child {
        		font-size: 1.5em;
        		text-align: center;
-       		padding: 30px;
+          margin: 0;
        }
+
+       .inspiration {
+          text-align: center;
+          margin: 0;
+       }
+
+        .inspiration__link {
+          color: #FFFFFF;
+          text-shadow: 0 3px 4px #000;
+        }
+
+        .inspiration__link:hover {
+          text-shadow: none;
+        }
 
 
 /* MOBILE */
@@ -211,4 +226,6 @@
 		width: 80%;
 		margin-bottom: 10px;
 	}
+
+  
 }

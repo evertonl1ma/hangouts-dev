@@ -1,22 +1,52 @@
- body {
-	    margin: 0;
-	    font-family: 'Roboto', sans-serif;
-	  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
- .intro {
-    	height: 85vh;
-    	background: url(../img/pexels-photo.jpg) no-repeat center top fixed;
-    	background-size: cover;
-    	margin-bottom: 20px;
-    }
+html, body {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ body {
+	font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.wrapper video {
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+}
+
+.site-header {
+  position: absolute;
+  color: #FFF;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2);
+  padding: 2%;
+}
 
 .intro a {
-	text-decoration: none;
 	color: #FFF;
 	font-size: 3em;
 	position: absolute;
 	left: 50%;
-	bottom: 20px;
+  top: 85%;
+	transform: translate(-50%, -50%);
 	-webkit-animation: movedown 1s ease-in-out infinite;
 	animation: movedown 1s ease-in-out infinite;
 }
@@ -38,60 +68,35 @@
     	transform: translate(0, 25px);
     }
 }
-
-
-     .header {
-    	position: relative;
-    	top: 0px;
-    	height: 15vh;
-    	width: 100%;
-    	margin-top: -25px;
-    	background: #333657;
+    
+    .container {
+      padding: 1% 2%;
     }
-
-     .header .title {
-     	padding: 20px;
-     	color: #FFF;
-     	font-size: 2.2em;
-     	background: url(../img/google-hangouts-logo.png) no-repeat 300px 35px;
-     	background-size: 25px;
-     }
-
-      .header .title::before {
-      	content: "<";
-      	font-size: 40px;
-      	color: #FFF;
-      	position: relative;
-      	left: 260px;
-      }
-
-      .header .title::after {
-      	content: "/>";
-      	font-size: 40px;
-      	color: #FFF;
-      	position: relative;
-      	right: -60px;
-      }
-
-     .header a {
-     	text-decoration: none;
-     }
 
      .galerie-hangout {
      	width: auto;
-     	max-width: 1000px;
      	margin-right: auto;
      	margin-left: auto;
      }
 
+     .galerie-hangout::before,
+     .galerie-hangout::after {
+        content: "";
+        display: table;
+     }
+
+     .galerie-hangout::after {
+        clear: both;
+     }
+
 	   .hangout {
-	   		width: 220px;
+        width: 100%;
 	   		border-radius: 5px;
-	   		display: inline-block;
-	   		margin: 10px;
 	   		border: 1px solid #f0f0f0;
 	   		vertical-align: top;
 	   		min-height: 250px;
+        float: left;
+        margin-bottom: 10px;
 	   }
 
 	 
@@ -107,9 +112,6 @@
 	   		opacity: 0.5;
 	   }
 
-	   .hangout a {
-	   		text-decoration: none;
-	   }
 	   
 	   .hangout-name,
 	   .hangout-theme {
@@ -132,7 +134,7 @@
 	   		position: fixed;
 	   		top: 0;
 	   		left: 0;
-	   		background: rgba(0, 0, 0, 0.9);
+	   		background: rgba(0, 0, 0, 1);
 	   		width: 100%;
 	   		height: 100%;
 	   		text-align: center;
@@ -162,8 +164,6 @@
 
        .site-footer {
        		background: #333657;
-       		position: relative;
-       		bottom: -25px;
           padding: 20px;
        }
 
@@ -198,34 +198,40 @@
 
 
 /* MOBILE */
-
-@media (max-width: 980px) {
-	.galerie-hangout {
-		width: 90%;
-	}
-
-	.hangout {
-		width: 30%;
-	}
+@media (min-width: 350px) {
+  .hangout {
+    width: 49%;
+  }
+  .hangout:nth-child(2n + 1) {
+    margin-right: 2%;
+  }
 }
 
-@media (max-width: 817px) {
-	
-	.hangout {
-		width: 30%;
-		margin: 10px 5px;
-	}
+@media (min-width: 600px) {
+  .hangout {
+    width: 32%;
+  }
+
+  .hangout:nth-child(2n + 1) {
+     margin-right: 0;
+  }
+
+  .hangout:not(:nth-child(3n + 0)) {
+    margin-right: 2%;
+  }
 }
 
-@media (max-width: 493px) {
-	.galerie-hangout {
-		text-align: center;
-	}
+@media (min-width: 1000px) {
+  .hangout {
+    width: 23.5%;
+  }
 
-	.hangout {
-		width: 80%;
-		margin-bottom: 10px;
-	}
 
-  
+  .hangout:not(:nth-child(3n + 0)) {
+    margin-right: 0%;
+  }
+
+    .hangout:not(:nth-child(4n + 0)) {
+     margin-right: 2%;
+  }
 }
